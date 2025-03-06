@@ -1,0 +1,21 @@
+{% comment %} the reusable fragment into an include or a template tag {% endcomment %}
+{%comment%}//{include} -> usado em multiplos arquivos. {% endcomment %}
+
+{% comment %} 
+    Aqui será praticamente onde vou aplicar todas as estruturas repetidas
+{% endcomment %}
+
+{% include "global/partials/head.html" %}
+{% include "global/partials/menu.html" %}
+
+<h1>{% block texto %} BASE {% endblock  %}</h1>
+<br>
+
+<main class = "content">
+    {% block posts %}{% endblock posts %}
+    {% block home %}{% endblock home %}
+</main>
+
+
+</body>
+</html>
